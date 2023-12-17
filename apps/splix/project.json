@@ -17,7 +17,10 @@
         "tsConfig": "apps/splix/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/splix/src/favicon.ico", "apps/splix/src/assets"],
-        "styles": ["apps/splix/src/styles.scss"],
+        "styles": [
+          "apps/splix/src/theme/variables.scss",
+          "apps/splix/src/global.scss"
+        ],
         "scripts": []
       },
       "configurations": {

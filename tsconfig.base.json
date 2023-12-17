@@ -14,7 +14,27 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@splix/auth/data-access": ["libs/splix/auth/data-access/src/index.ts"],
+      "@splix/shared/app-config": ["libs/splix/shared/app-config/src/index.ts"],
+      "@splix/shared/ui/tab": ["libs/splix/shared/ui/tab/src/index.ts"],
+      "@splix/shared/ui/toggle-password": [
+        "libs/splix/shared/ui/toggle-password/src/index.ts"
+      ],
+      "@splix/sign-in/data-access": [
+        "libs/splix/sign-in/data-access/src/index.ts"
+      ],
+      "@splix/sign-in/feature": ["libs/splix/sign-in/feature/src/index.ts"],
+      "@splix/sign-up/data-access": [
+        "libs/splix/sign-up/data-access/src/index.ts"
+      ],
+      "@splix/sign-up/feature": [
+        "libs/splix/sign-up/feature/src/index.ts"
+      ],
+      "@splix/shared/util": [
+        "libs/splix/shared/util/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
