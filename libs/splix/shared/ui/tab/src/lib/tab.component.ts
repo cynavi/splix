@@ -5,7 +5,7 @@ import { supabase } from '@splix/shared/app-config';
 import {
   IonButton,
   IonContent,
-  IonHeader,
+  IonHeader, IonIcon,
   IonLabel,
   IonMenu,
   IonRouterOutlet,
@@ -15,6 +15,8 @@ import {
 } from '@ionic/angular/standalone';
 import { AuthStore } from '@splix/auth/data-access';
 import { NgIf } from '@angular/common';
+import { homeOutline, personOutline, logOutOutline } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'as-tab',
@@ -31,7 +33,8 @@ import { NgIf } from '@angular/common';
     IonTitle,
     IonContent,
     IonButton,
-    NgIf
+    NgIf,
+    IonIcon
   ],
   templateUrl: './tab.component.html'
 })
@@ -41,9 +44,14 @@ export class TabComponent {
   private readonly menuCtrl: MenuController = inject(MenuController);
   protected authStore: AuthStore = inject(AuthStore);
 
+  constructor() {
+    addIcons({homeOutline, personOutline, logOutOutline})
+  }
+
   openMenu(): void {
-    this.menuCtrl.enable(true, 'menu')
-      .then((): Promise<void> => this.menuCtrl.open('menu').then());
+    // this.menuCtrl.open('more-menu').then();
+    this.menuCtrl.enable(true, 'more-menu')
+      .then((): Promise<void> => this.menuCtrl.open('more-menu').then());
   }
 
   async signOut(): Promise<void> {

@@ -21,6 +21,7 @@
       "@splix/shared/ui/toggle-password": [
         "libs/splix/shared/ui/toggle-password/src/index.ts"
       ],
+      "@splix/shared/util": ["libs/splix/shared/util/src/index.ts"],
       "@splix/sign-in/data-access": [
         "libs/splix/sign-in/data-access/src/index.ts"
       ],
@@ -28,12 +29,19 @@
       "@splix/sign-up/data-access": [
         "libs/splix/sign-up/data-access/src/index.ts"
       ],
-      "@splix/sign-up/feature": [
-        "libs/splix/sign-up/feature/src/index.ts"
+      "@splix/sign-up/feature": ["libs/splix/sign-up/feature/src/index.ts"],
+      "@splix/splix/fete/data-access": [
+        "libs/splix/fete/data-access/src/index.ts"
       ],
-      "@splix/shared/util": [
-        "libs/splix/shared/util/src/index.ts"
-      ]
+      "@splix/splix/fete/feature": ["libs/splix/fete/feature/src/index.ts"],
+      "@splix/splix/home/data-access": [
+        "libs/splix/home/data-access/src/index.ts"
+      ],
+      "@splix/splix/home/feature": ["libs/splix/home/feature/src/index.ts"],
+      "@splix/splix/snack/data-access": [
+        "libs/splix/snack/data-access/src/index.ts"
+      ],
+      "@splix/splix/snack/feature": ["libs/splix/snack/feature/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

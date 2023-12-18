@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChild } from '@angular/core';
+import {  Component, ContentChild } from '@angular/core';
 import { IonInput } from '@ionic/angular';
 import { IonIcon } from '@ionic/angular/standalone';
 import { eyeOffOutline, eyeOutline } from 'ionicons/icons';
@@ -14,7 +14,7 @@ import { addIcons } from 'ionicons';
   ],
   standalone: true
 })
-export class TogglePasswordComponent implements AfterContentInit {
+export class TogglePasswordComponent  {
 
   @ContentChild(HTMLElement) input!: HTMLElement;
 
@@ -24,9 +24,7 @@ export class TogglePasswordComponent implements AfterContentInit {
     addIcons({eyeOffOutline, eyeOutline})
   }
 
-  ngAfterContentInit() {
-    console.log(this.input);
-  }
+
 
   toggleShow(): void {
     this.showPassword = !this.showPassword;
