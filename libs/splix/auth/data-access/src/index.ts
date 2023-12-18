@@ -1,1 +1,1 @@
-export * from './lib/store/auth.store';
+export * from './lib/auth.store';

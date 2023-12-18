@@ -1,1 +1,1 @@
-export * from './lib/data-access/sign-up.store';
+export * from './lib/sign-up.store';

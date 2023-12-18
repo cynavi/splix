@@ -13,14 +13,11 @@ interface SignInState {
 @Injectable()
 export class SignInStore {
 
-  signIn$: Subject<SignInWithPasswordCredentials> = new Subject();
   private readonly router: Router = inject(Router);
-  private state: WritableSignal<SignInState> = signal({
-    loaded: true,
-    error: null
-  });
+  private state: WritableSignal<SignInState> = signal({ loaded: true, error: null });
   loaded: Signal<boolean> = computed(() => this.state().loaded);
   error: Signal<string | null> = computed(() => this.state().error);
+  signIn$: Subject<SignInWithPasswordCredentials> = new Subject();
 
   constructor() {
     this.signIn$.pipe(
